@@ -137,8 +137,6 @@ class ProjState extends State<Project> {
   }
 }
 
-const projState = ProjState.getInstance();
-
 // Project Component Class
 abstract class Component<T extends HTMLElement, U extends HTMLElement> {
   private porjListTemplate: HTMLTemplateElement;
@@ -385,9 +383,12 @@ class ProjInput extends Component<HTMLDivElement, HTMLFormElement> {
   }
 }
 
+// Instantiate project status
+const projState = ProjState.getInstance();
+
 // Instantiate project input
 const projInput = new ProjInput();
 
-// Instantiate project list
+// Instantiate project lists
 const activeProjList = new ProjList("active");
 const finishedProjList = new ProjList("finished");
