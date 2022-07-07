@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc --watch",
-    "start": "lite-server"
+    "start": "lite-server",
+    "format": "npx prettier --check ./src",
+    "format:f": "npx prettier --write ./src"
   },
   "keywords": [
     "typescript",
@@ -16,6 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.5.4",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
 }
